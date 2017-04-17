@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <Button
+        android:id="@+id/buttonone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="100dp"
+        android:onClick="setFirstMessage"
+        android:text="@string/start_button"></Button>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="20dp"
+        android:text="hello"
+        android:textSize="40dp"
+        android:textColor="#0000FF"/>
+
+    <Button
+        android:id="@+id/buttontwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="120dp"
+        android:onClick="setSecondMessage"
+        android:text="@string/stop_button"></Button>
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+
+
+    tools:context="com.example.luujfer.cse110lab1.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="150dp"
+        android:text="Welcome to"
+        android:textSize="32dp"
+        android:textColor="#000"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="20dp"
+        android:text="CSE 110"
+        android:textSize="40dp"
+        android:textColor="#0000FF"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTo p="20dp"
+        android:text="Software Engineering"
+        android:textSize="25dp"
+        android:textColor="#008000"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="20dp"
+        android:text="Spring 2017"
+        android:textSize="35dp"
+        android:textColor="#000"/>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="10dp"
+        android:text="Jennifer and Lin"
+        android:textSize="35dp"
+        android:textColor="#000"/>
+    <Button
+        android:id="@+id/showbutton"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="10dp"
+        android:text="SHOW MY NAME"
+        android:onClick="showName" />
+    <Button
+        android:id="@+id/hidebutton"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="2dp"
+        android:text="HIDE MY NAME"
+        android:onClick="hideName" />
+
+    />
+
+
+</LinearLayout>
