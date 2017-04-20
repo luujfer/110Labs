@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SharedPref</string>
+    <string name="first">First Name</string>
+    <string name="last">Last Name</string>
+    <string name="save">SAVE</string>
+    <string name="display">DISPLAY</string>
 </resources>

@@ -1,17 +1,17 @@
-package com.example.luujfer.servicetest;
+package com.example.luujfer.startedservice;
 
 import android.app.Service;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
+import android.os.IBinder;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+import android.view.View;
 
-public class DemoService extends Service {
-    public DemoService() {
+public class MyService extends Service {
+
+
+    public MyService() {
     }
 
     final class MyThread implements Runnable{
@@ -21,15 +21,15 @@ public class DemoService extends Service {
         }
         @Override
         public void run(){
-            EditText search = (EditText) findViewById(R.id.search);
+
 
             SharedPreferences sharedPreferences = getSharedPreferences("user_name", MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
 
-            editor.putString("firstname", search.getText().toString());
+            editor.putString("name", "Harry");
 
             editor.apply();
-            Toast.makeText(MainActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(MyService.this, "Started", Toast.LENGTH_SHORT).show();
 
             synchronized (this){
                 try{
@@ -41,8 +41,10 @@ public class DemoService extends Service {
 
                 stopSelf(startId);
             }
+            //Toast.makeText(MyService.this, "Stopped", Toast.LENGTH_SHORT).show();
         }
     }
+
     @Override
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
@@ -51,7 +53,7 @@ public class DemoService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId){
-        Toast.makeText(DemoService.this,"Service Started", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MyService.this,"Service Started", Toast.LENGTH_SHORT).show();
         Thread thread = new Thread(new MyThread(startId));
         thread.start();
 
@@ -61,7 +63,7 @@ public class DemoService extends Service {
 
 
     public void onDestroy(){
-        Toast.makeText(DemoService.this,"Service Stopped", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MyService.this,"Service Stopped", Toast.LENGTH_SHORT).show();
         super.onDestroy();
     }
 }
